@@ -2,16 +2,17 @@
 import Layout from "../layouts/Layout.astro";
 import PlayListItemCard from "../components/PlayListItemCard.astro";
 import { playlists } from "../lib/data";
+import Greeting from "../components/Greeting.svelte";
 ---
 
 <Layout title="Spotify Clone.">
   <div
     id="playlist-content"
-    class="relative transition-all duration-100 bg-blue-900 rounded-lg"
+    class="relative  bg-blue-900 rounded-lg h-full overflow-hidden"
   >
-    <div class="relative z-10 px-4 pt-4">
+    <div class="relative z-10 px-4 pt-4 ">
       <div>
-        <h2 class="text-3xl font-bold">Buenas Tardes</h2>
+        <Greeting/>
         <div class="flex flex-grap mt-6 gap-4">
           {
             playlists.map((playlists) => (
@@ -22,7 +23,7 @@ import { playlists } from "../lib/data";
       </div>
     </div>
     <div
-      class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/80"
+      class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/80 "
     >
     </div>
   </div>
